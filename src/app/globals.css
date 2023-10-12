@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: monarcy;
+    src: url(./Heading-Now-Variable.ttf);
+} 
+
+::selection{
+    color: white;
+    background-color: black;
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    /* background-image: url('https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'); */
+    /* background-color: rgb(0, 0, 0); */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#home{
+    position: relative;
+    background: rgba(68, 66, 66, 0.15); /* Adjust opacity as needed */
+    border-radius: 12px; /* Adjust the border radius to control the glass effect */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#home ::before{
+    content: "";
+    background: inherit;
+    filter: blur(10px); /* Adjust the blur amount as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
