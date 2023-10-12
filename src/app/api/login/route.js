@@ -31,7 +31,8 @@ export async function POST(nextRequest) {
             user: userinfo.name,
             id: userinfo._id
         }
-        const token = jwt.sign(tokendata, process.env.jwt_key, { expiresIn: "7d" });
+        const jwt_key= "shivjeetpaswanuserinformationtoken"
+        const token = jwt.sign(tokendata, jwt_key, { expiresIn: "7d" });
 
         const response = NextResponse.json({  success: true, message: "user login successfully" });
 
